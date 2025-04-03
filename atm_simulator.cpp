@@ -37,3 +37,10 @@ do {
             break;
     }
 } while (choice != 4); // Continue until the user chooses to exit
+void showMenu() {
+    cout << "\nWelcome to the ATM\n";
+    cout << "1. Check Balance\n";
+    cout << "2. Deposit Money\n";
+    cout << "3. Withdraw Money\n";
+    cout << "4. Exit\n";
+}
