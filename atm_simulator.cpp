@@ -44,3 +44,24 @@ void showMenu() {
     cout << "3. Withdraw Money\n";
     cout << "4. Exit\n";
 }
+double checkBalance(double balance) {
+    return balance; // Simply returns the balance without modifying it
+}
+void deposit(double &balance, double amount) {
+    if (amount >= 0) {
+        balance += amount;  // Modify the balance directly using pass-by-reference
+        cout << "You have successfully deposited $" << amount << ". Your new balance is $" << balance << endl;
+    } else {
+        cout << "Invalid deposit amount. Amount cannot be negative." << endl;
+    }
+}
+void withdraw(double &balance, double amount) {
+    if (amount < 0) {
+        cout << "Invalid withdrawal amount. Amount cannot be negative." << endl;
+    } else if (amount > balance) {
+        cout << "Insufficient funds. Your balance is only $" << balance << ". Withdrawal not completed." << endl;
+    } else {
+        balance -= amount;  // Modify the balance directly using pass-by-reference
+        cout << "You have successfully withdrawn $" << amount << ". Your new balance is $" << balance << endl;
+    }
+}
