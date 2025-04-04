@@ -64,3 +64,4 @@ void withdraw(double &balance, double amount) {
         balance -= amount;  // Modify the balance directly using pass-by-reference
         cout << "You have successfully withdrawn $" << amount << ". Your new balance is $" << balance << endl;
     }
+}
