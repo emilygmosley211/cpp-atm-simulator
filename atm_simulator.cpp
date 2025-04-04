@@ -65,3 +65,21 @@ void withdraw(double &balance, double amount) {
         cout << "You have successfully withdrawn $" << amount << ". Your new balance is $" << balance << endl;
     }
 }
+void exitATM() {
+    cout << "Thank you for using the ATM. Goodbye!" << endl;
+}
+  // Input validation for the menu choice
+  while (cin.fail() || choice < 1 || choice > 4) {
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cout << "Invalid input. Please enter a valid choice (1-4): ";
+    cin >> choice;
+}
+
+// Input validation for deposit and withdrawal amounts
+while (cin.fail() || amount < 0) {
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cout << "Invalid input. Amount must be positive. Please enter a valid amount: $";
+    cin >> amount;
+}
